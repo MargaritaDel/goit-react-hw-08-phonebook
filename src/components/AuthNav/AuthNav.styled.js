@@ -6,10 +6,10 @@ export const NavContainer = styled.div`
     text-decoration: none;
     padding: 12px;
     font-weight: 700;
-    color: #2a363b;
+    color: yellow;
   }
   & .active {
-    color: #e84a5f;
+    color: white;
   }
 `;
 
