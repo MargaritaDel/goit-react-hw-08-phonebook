@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ContainerForm, ContainerInput } from './Contact.styled';
+import { ContactFormContainer, ContactFormInput, ContactFormButton, ContactInput } from './Contact.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -38,10 +38,10 @@ const ContactForm = () => {
   const handleChangeNumber = event => setNumber(event.target.value);
 
   return (
-    <ContainerForm action="" onSubmit={handleOnSubmit}>
-      <ContainerInput htmlFor="" name="name">
+    <ContactFormContainer action="" onSubmit={handleOnSubmit}>
+      <ContactFormInput htmlFor="" name="name">
         Name
-        <input
+        <ContactInput
           value={name}
           onChange={handleChangeName}
           type="text"
@@ -50,10 +50,10 @@ const ContactForm = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </ContainerInput>
-      <ContainerInput htmlFor="" name="number">
+      </ContactFormInput>
+      <ContactFormInput htmlFor="" name="number">
         Number
-        <input
+        <ContactInput
           value={number}
           onChange={handleChangeNumber}
           type="tel"
@@ -62,10 +62,10 @@ const ContactForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-      </ContainerInput>
+      </ContactFormInput>
 
-      <button type="submit">Add contact</button>
-    </ContainerForm>
+      <ContactFormButton type="submit">Add contact</ContactFormButton>
+    </ContactFormContainer>
   );
 };
 

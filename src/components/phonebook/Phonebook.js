@@ -1,6 +1,6 @@
 import ContactForm from 'components/Contact/Contact';
 import ContactList from 'components/ContactList/ContactList';
-import { ContainerSettings, Title } from './Phonebook.styled';
+import { ContainerSettings} from './Phonebook.styled';
 import Filter from 'components/filter/Filter';
 
 export const Phonebook = () => {
@@ -9,12 +9,11 @@ export const Phonebook = () => {
       <ContainerSettings>
         <div>
           <ContactForm />
-          {/* <h2>Filter</h2> */}
           <Filter />
         </div>
-        <div>
+        {/* <div>
           <Title>Phonebook</Title>
-        </div>
+        </div> */}
 
         <ContactList />
       </ContainerSettings>
