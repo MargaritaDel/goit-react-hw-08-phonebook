@@ -8,11 +8,9 @@ margin: 180px auto;
 padding: 40px 20px;
 max-width: 350px;
 gap: 20px;
-
 background-repeat: no-repeat;
 background: yellow
   radial-gradient(circle at 50% 0, white, yellow);
-
 box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
 `;
 
