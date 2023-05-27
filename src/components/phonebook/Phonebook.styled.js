@@ -1,19 +1,5 @@
-import styled, { keyframes } from 'styled-components';
 
-const wiggleAnimation = keyframes`
-  0% {
-    transform: rotateZ(0deg);
-  }
-  25% {
-    transform: rotateZ(-5deg);
-  }
-  75% {
-    transform: rotateZ(5deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
-`;
+import styled from '@emotion/styled';
 
 export const ContainerSettings = styled.div`
 
@@ -26,8 +12,7 @@ export const ContainerSettings = styled.div`
 
 `;
 export const Title = styled.h1`
-  writing-mode: vertical-lr; /* Вертикальное направление слева направо */
-  text-orientation: upright; /* Поворот текста в вертикальном направлении */
+
   color: yellow;
-  animation: ${wiggleAnimation} 1s ease-in-out 5;
+  
 `;

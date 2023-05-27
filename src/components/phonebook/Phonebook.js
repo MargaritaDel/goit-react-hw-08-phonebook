@@ -1,6 +1,6 @@
 import ContactForm from 'components/Contact/Contact';
 import ContactList from 'components/ContactList/ContactList';
-import { ContainerSettings, Title } from '../phonebook/Phonebook.styled';
+import { ContainerSettings, Title } from './Phonebook.styled';
 import Filter from 'components/filter/Filter';
 
 export const Phonebook = () => {

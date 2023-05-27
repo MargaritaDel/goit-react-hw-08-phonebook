@@ -5,7 +5,7 @@ import { Layout } from './Layout';
 import { PrivateRoute } from './Routes/PrivateRoute';
 import { PublicRoute } from './Routes/PublicRoute';
 import { refreshUser } from '../redux/auth/authOperations';
-import { useAuth } from 'hooks';
+import { useAuth } from 'hooks/useAuth';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
@@ -29,17 +29,17 @@ export const App = () => {
         <Route
           path="/register"
           element={
-            <PublicRoute redirectTo="/contacts" component={<RegisterPage />} />
+            <PublicRoute redirectTo="/phonebook" component={<RegisterPage />} />
           }
         />
         <Route
           path="/login"
           element={
-            <PublicRoute redirectTo="/contacts" component={<LoginPage />} />
+            <PublicRoute redirectTo="/phonebook" component={<LoginPage />} />
           }
         />
         <Route
-          path="/contacts"
+          path="/phonebook"
           element={
             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }

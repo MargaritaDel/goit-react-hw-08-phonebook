@@ -1,12 +1,10 @@
 import { useState } from 'react';
+import { ContainerForm, ContainerInput } from './Contact.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-import { ContainerForm, ContainerInput } from './Contact.styled';
 
-
-
-const Contact = () => {
+const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -16,7 +14,6 @@ const Contact = () => {
   const handleOnSubmit = event => {
     event.preventDefault();
     const form = event.currentTarget;
-
     const isExist = contacts.find(
       contact =>
         contact.name.toLowerCase() === form.elements.name.value.toLowerCase()
@@ -72,6 +69,6 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactForm;
 
 
