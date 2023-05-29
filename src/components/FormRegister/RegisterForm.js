@@ -1,9 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import { FormRegister, LabelRegister, InputRegister, ButtonRegister} from './RegisterForm.styled';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -16,6 +18,7 @@ export const RegisterForm = () => {
       })
     );
     form.reset();
+    navigate('/phonebook');
   };
 
   return (
